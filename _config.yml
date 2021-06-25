@@ -5,3 +5,4 @@ collections:
     permalink: /:path/
 
 permalink: pretty
+include: ['_pages']
