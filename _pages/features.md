@@ -1,5 +1,5 @@
 ---
-title: Can I Buzz
+title: Features
 layout: features
 permalink: /features.html
 ---

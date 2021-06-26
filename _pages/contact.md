@@ -1,5 +1,5 @@
 ---
-title: Can I Buzz
+title: Contact
 layout: contact
 permalink: /contact.html
 ---

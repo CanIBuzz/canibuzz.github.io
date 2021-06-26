@@ -1,5 +1,5 @@
 ---
-title: Can I Buzz
+title: Blog
 layout: blog
 permalink: /blog.html
 ---

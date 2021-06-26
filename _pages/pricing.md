@@ -1,5 +1,5 @@
 ---
-title: Can I Buzz
+title: Pricing
 layout: pricing
 permalink: /pricing.html
 ---

@@ -1,5 +1,5 @@
 ---
-title: Can I Buzz
+title: Elements
 layout: elements
 permalink: /elements.html
 ---
