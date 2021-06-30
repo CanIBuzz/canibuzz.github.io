@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
 collections:
-  pages:
+  posts:
     output: true
-    permalink: /:path/
+    permalink: /:title:.html
 
 permalink: pretty
 include: ['_pages']
