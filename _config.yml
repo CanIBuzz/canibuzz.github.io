@@ -3,7 +3,7 @@ collections:
   posts:
     output: true
 
-permalink: /:title.html
+permalink: /blog/:title.html
 
 #permalink: pretty
 include: ['_pages']
