@@ -6,3 +6,9 @@ collections:
 
 permalink: pretty
 include: ['_pages']
+
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
