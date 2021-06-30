@@ -2,9 +2,10 @@ theme: jekyll-theme-minimal
 collections:
   posts:
     output: true
-    permalink: /:title:.html
 
-permalink: pretty
+permalink: /:title.html
+
+#permalink: pretty
 include: ['_pages']
 
 gems:
