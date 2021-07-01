@@ -27,7 +27,7 @@
         {% for post in site.posts %}
         <article class="blog_item">
             <div class="blog_item_img">
-            <img class="card-img rounded-0" src="/img/blog/single_blog_1.png" alt="" data-pagespeed-url-hash="4114322597" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            <img class="card-img rounded-0" src="{% if post.titleimg %}{{ post.titleimg }}{% else %}img/blog/single_blog_1.png {% endif %}" alt="" data-pagespeed-url-hash="4114322597" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
             <a href="#" class="blog_item_date">
             <h3>{{ post.date | date: '%d' }}</h3>
             <p>{{ post.date | date: '%b' }}</p>
