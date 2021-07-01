@@ -46,7 +46,7 @@ exclude:
 pagination:
   enabled: true
   per_page: 6
-  permalink: '/blog/:num/'
+  permalink: '/posts/:num/'
   title: ':title - page :num of :max'
   limit: 0
   sort_field: 'date'
