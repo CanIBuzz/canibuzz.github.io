@@ -37,8 +37,8 @@
             <a class="d-inline-block" href="{{ post.url }}">
             <h2>{{ post.title }}</h2>
             </a>
-            <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-            he earth it first without heaven in place seed it second morning saying.</p>
+            <p>{% if post.header %}{{ post.header }}{% else %}Second test from form fish beast made every of seas
+                all gathered us saying he our {% endif %}</p>
             <ul class="blog-info-link">
             <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
            <!-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>-->
