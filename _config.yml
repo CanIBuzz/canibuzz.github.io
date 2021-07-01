@@ -12,6 +12,7 @@ gems:
   - jekyll-sitemap
   - jekyll-archives
   - jekyll-paginate
+  - jekyll-paginate-v2
   - [jekyll-paginate]
 
 paginate_path: blog/page:num/
