@@ -13,3 +13,8 @@ gems:
   - jekyll-sitemap
   - jekyll-archives
   - jekyll-paginate
+
+paginate_path: blog/page:num/
+
+paginate: 6
+
