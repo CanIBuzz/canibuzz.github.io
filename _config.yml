@@ -58,3 +58,6 @@ pagination:
 #   retains backwards compatibility with the old pagination logic 
 #paginate: 3
 #paginate_path: "/legacy/page:num/"
+
+plugins:
+  - jekyll-sitemap
