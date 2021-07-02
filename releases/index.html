@@ -1,0 +1,16 @@
+---
+layout: default
+title: release example
+pagination:
+    enabled: true
+    collection: releases
+---
+<div>
+    <h1>Just Work</h1>
+</div>
+
+{% for release in paginator.posts %}
+
+<h2>{{ page.title }} Hard {{ post.title }}
+</h2>
+{% endfor %}
