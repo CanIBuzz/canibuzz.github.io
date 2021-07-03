@@ -1,5 +1,21 @@
 <aside class="single_sidebar_widget popular_post_widget">
     <h3 class="widget_title">Recent Post</h3>
+    {% for post in site.posts limit:5 %}
+    <div class="media post_item">
+        <img src="img/post/post_1.png" alt="post" data-pagespeed-url-hash="2885802272" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        <div class="media-body">
+        <a href="single-blog.html">
+        <h3>From life was you fish...</h3>
+        </a>
+        <p>January {{ post.date | date: '%d' }}, 2019</p>
+        </div>
+        </div>
+    {{ post.date | date: '%d' }}
+    {{ post.title }}
+      {% include article.html %}
+    {% end %}
+
+    
     <div class="media post_item">
     <img src="img/post/post_1.png" alt="post" data-pagespeed-url-hash="2885802272" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
     <div class="media-body">
