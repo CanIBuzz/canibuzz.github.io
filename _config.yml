@@ -34,11 +34,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sverrirs
 
-# Build settings
 markdown: kramdown
 theme: minima
 gems:
   - jekyll-paginate-v2
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -70,3 +70,4 @@ paginate_path: /page:num/
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
