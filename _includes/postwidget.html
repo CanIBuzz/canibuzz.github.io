@@ -2,13 +2,14 @@
     <h3 class="widget_title">Recent Post</h3>
     {% for post in site.posts limit:4 %}
     <a class="media post_item">
-        <a href="{{ post.url }}"><img src="{{ post.featimg }}" alt="post" data-pagespeed-url-hash="2885802272" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
         <div class="media-body">
+        <a href="{{ post.url }}"><img src="{{ post.featimg }}" alt="post" data-pagespeed-url-hash="2885802272" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+        
         <a href="{{ post.url }}">
         <h3>{{ post.title }}</h3>
         </a>
-        <p>{{ post.date | date: '%B' }} {{ post.date | date: '%d' }}, {{ post.date | date: '%Y' }}</p>
-        </div>
+        <br />{{ post.date | date: '%B' }} {{ post.date | date: '%d' }}, {{ post.date | date: '%Y' }}
+        </div></a>
    
     {% endfor %}
     </aside>
