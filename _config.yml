@@ -69,3 +69,4 @@ paginate_path: /page:num/
 
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
