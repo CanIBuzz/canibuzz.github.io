@@ -4,7 +4,7 @@
     <div class="media post_item">
         <img src="img/post/post_1.png" alt="post" data-pagespeed-url-hash="2885802272" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
         <div class="media-body">
-        <a href="single-blog.html">
+        <a href="{{ post.url }}">
         <h3>{{ post.title }}</h3>
         </a>
         <p>January {{ post.date | date: '%d' }}, 2019</p>
