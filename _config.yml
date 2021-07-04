@@ -26,6 +26,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-paginate-v2
+  - octopress-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
