@@ -67,6 +67,8 @@ pagination:
 
 paginate_path: /page:num/
 
+paginate: 5
+
 plugins:
   - jekyll-sitemap
   - jekyll-feed
