@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "dude"
+title:  dude
 featimg: /img/post/post_1.png
 ---
 
