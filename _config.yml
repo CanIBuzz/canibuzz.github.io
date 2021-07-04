@@ -6,6 +6,8 @@ collections:
     output: true
     permalink: /releases/:path
 
+url: "https://canibuzz.github.io"
+
 
 
 permalink: pretty
@@ -31,7 +33,7 @@ email: jekyll@sverrirs.com
 description: > # this means to ignore newlines until "baseurl:"
   Shows how the jekyll-paginate-v2 gem can be used on a typical blog created in Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sverrirs
 
 markdown: kramdown
