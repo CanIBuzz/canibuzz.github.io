@@ -1,18 +1,3 @@
-collections:
-  posts:
-    output: true
-    permalink: /blog/:title.html
-  releases:
-    output: true
-    permalink: /releases/:path
-
-url: "https://canibuzz.github.io"
-
-
-
-permalink: pretty
-include: ['_pages']
-
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -33,28 +18,32 @@ email: jekyll@sverrirs.com
 description: > # this means to ignore newlines until "baseurl:"
   Shows how the jekyll-paginate-v2 gem can be used on a typical blog created in Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sverrirs
 
+# Build settings
 markdown: kramdown
 theme: minima
 gems:
   - jekyll-paginate-v2
-  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
-
-
-
+plugins:
+  - jekyll-paginate-v2
 # Produces a cleaner folder structure when using categories
-# permalink: /:year/:month/:title.html
+permalink: /:year/:month/:title.html
+
+# Explicitly turn off the old code
+#paginate: nil
+#paginate_path: nil
 
 # Pagination Settings
 pagination:
   enabled: true
   per_page: 6
-  permalink: '/posts/:num/'
+  offset: 2
+  permalink: '/page:num/'
   title: ':title - page :num of :max'
   limit: 0
   sort_field: 'date'
@@ -64,14 +53,7 @@ pagination:
 # Old jekyll-paginate pagination logic
 #   Uncomment thew two entries below to demonstrate how this new gem
 #   retains backwards compatibility with the old pagination logic 
+#   AS OF JANUARY 2018 this code does not work anymore!
 #paginate: 3
-#paginate_path: "/legacy/page:num/"
-
-paginate_path: /page:num/
-
-paginate: 5
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
+#paginate_path: "/page/page:num/"
+include: ['_pages']
