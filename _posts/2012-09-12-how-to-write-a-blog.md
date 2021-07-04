@@ -2,7 +2,7 @@
 layout: posts
 title:  dude
 featimg: /img/post/post_1.png
-categories: [Tech, Personal]
+categories: [Tech, Personal, WhatsApp, Women, Insects]
 ---
 
 # Welcome
