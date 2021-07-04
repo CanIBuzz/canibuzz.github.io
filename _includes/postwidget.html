@@ -7,12 +7,9 @@
         <a href="{{ post.url }}">
         <h3>{{ post.title }}</h3>
         </a>
-        <p>January {{ post.date | date: '%d' }}, 2019</p>
+        <p>{{ post.date | date: '%B' }} {{ post.date | date: '%d' }}, {{ post.date | date: '%Y' }}</p>
         </div>
-        </div>
-    {{ post.date | date: '%d' }}
-    
-     
+        </div>  
     {% endfor %}
 
     <!--
