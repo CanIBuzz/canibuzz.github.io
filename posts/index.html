@@ -4,10 +4,6 @@ title: Penguins
 paginate_path: "/posts/page:num/"
 pagination:
   enabled: true
-  collection: posts
-paginate:
-  collection: posts
-  per_page: 4
 ---
 <!--{{ page.title }}
 
@@ -29,7 +25,7 @@ next_page_path:        {{ paginator.next_page_path }}-->
 
 {% for post in paginator.posts %}
 
-{{ page.title }}
+{{ post.title }}
 
 
 {% endfor %}
