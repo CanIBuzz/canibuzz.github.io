@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  Luft-Fahrzeug-Gesellschaft
 date:   2016-11-23 19:16:49 +0100
 categories: wikipedia

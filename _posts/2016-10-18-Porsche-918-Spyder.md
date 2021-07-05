@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  Porsche 918 Spyder
 date:   2016-10-18 19:16:49 +0100
 categories: cars, grand touring, Porsche, sports car, b+w

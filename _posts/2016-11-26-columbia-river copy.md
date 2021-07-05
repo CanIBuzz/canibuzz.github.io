@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  Columbia River
 date:   2016-11-26 19:16:49 +0100
 categories: [wikipedia, Github]

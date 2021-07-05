@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "Welcome to Jekyll Paginate V2!"
 date:   2016-11-27 19:16:49 +0100
 categories: jekyll paginate

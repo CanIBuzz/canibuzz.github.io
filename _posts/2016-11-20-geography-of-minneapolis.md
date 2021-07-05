@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  Geography of Minneapolis
 date:   2016-11-20 19:16:49 +0100
 categories: wikipedia
