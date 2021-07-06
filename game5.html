@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://chromedino.com/ -->
+<html class="wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n5-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="Cache-control" content="public">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+	<title>T-Rex Dinosaur Game - Chrome Dino Runner Online</title>
+	<meta name="description" content="T-Rex Dinosaur - a replica of the hidden game from Chrome offline mode. Press Space to start the game online and jump your Dino, use down arrow (↓) to duck.">
+	<meta property="og:title" content="Chrome Dino Game">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromedino.com">
+    <meta property="og:image" content="/img/chrome_dino_runner.png">
+    <meta property="og:site_name" content="Chrome_Dino">
+    <meta property="og:description" content="Chrome T-Rex dinosaur game online with scores (records)">
+	<style>
+	/* Copyright 2013 The Chromium Authors. All rights reserved. * Use of this source code is governed by a BSD-style license that can be * found in the LICENSE file. */html,body{ padding: 0; margin: 0; width: 100%; height: 100%;}.icon { -webkit-user-select: none; display: inline-block;}.icon-offline { content: -webkit-image-set( url(default_100_percent/offline/100-error-offline.png) 1x, url(default_200_percent/offline/200-error-offline.png) 2x); position: relative;}.hidden { display: none;}/* Offline page */.offline .interstitial-wrapper { color: #2b2b2b; font-size: 1em; line-height: 1.55; margin: 0 auto; max-width: 600px; padding-top: 100px; width: 100%; position: relative;}.offline .runner-container { height: 150px; max-width: 600px; overflow: hidden; position: absolute; top: 5px; width: 44px; position: relative;}.offline .runner-canvas { height: 150px; max-width: 600px; opacity: 1; overflow: hidden; position: absolute; top: 0; z-index: 2;}.offline .controller { background: rgba(247,247,247, .1); height: -webkit-calc(100% + 18px); height: -moz-calc(100% + 18px); height: calc(100% + 18px); left: 0; position: absolute; top: 0; width: 100vw; z-index: 1;}#offline-resources { display: none;}/**** Custom Beginning ***/body { font-family: Open Sans;}a { color: #000;}body.main-page { background: #f7f7f7;}body.black-page { background: #000;}body.black-page .interstitial-wrapper { color: #ddd;}body.black-page .high-scores { color: #bbb;}body.black-page .other-versions ul li a { color: #ccc;}body.mario-page { background: rgb(117, 165, 249);}body.mario-page .interstitial-wrapper { color: #fff;}body.mario-page .high-scores { color: #fff;}body.mario-page .other-versions ul li a { color: #fff;}ul { margin: 0; padding: 0; list-style: none;}.__wrapper { width: auto; max-width: 516px; margin-left: auto; margin-right: auto;}.___wrapper { width: auto; max-width: 516px; margin-left: auto; margin-right: auto; background: transparent;}.___wrapper.black h3 { color: #fff;}.___wrapper .cc .mc-nav li svg path { fill: rgba(255,255,255,.4) !important;}#mc-container.mario-theme .cc .mc-head .mc-comment-star span svg path { fill: #ffda1e !important;}#mc-container.mario-theme .cc .mc-head .mc-star-count { color: #000 !important;}#mc-container.mario-theme .cc .mc-comment-time, .mc-complaint .mc-comment-time { color: #666 !important;}#mc-container.mario-theme .cc .mc-comment-footer > a { color: #666 !important;}#mc-container.mario-theme .cc .mc-nav li svg path { fill: rgba(0,0,0,.4) !important;}#mc-container.mario-theme .cc .mc-comment-menu > a svg path { fill: rgba(255,255,255,.6) !important;}#mc-container.mario-theme .cc .mc-comment-menu > a:hover svg path { fill: #fff !important;}#mc-container.mario-theme .cc .mc-comment-vote .mc-comment-dislike,#mc-container.mario-theme .cc .mc-comment-vote .mc-comment-like { color: rgba(255,255,255,.6) !important;}#mc-container.mario-theme .cc .mc-comment-vote .mc-comment-dislike svg path,#mc-container.mario-theme .cc .mc-comment-vote .mc-comment-like svg path { fill: rgba(255,255,255,.6) !important;}#mc-container.mario-theme .cc .mc-comment-vote .mc-comment-dislike:hover { color: #f73131 !important;}#mc-container.mario-theme .cc .mc-comment-vote .mc-comment-like:hover { color: #29e548 !important;}#mc-container.mario-theme .cc .mc-comment-vote .mc-comment-dislike:hover svg path{ fill: #f73131 !important;}#mc-container.mario-theme .cc .mc-comment-vote .mc-comment-like:hover svg path{ fill: #29e548 !important;}#mc-container.mario-theme .cc .mc-comment-rating { color: #fff !important;}#main-content { margin: 0; padding: 0 20px;}#main-content h1 { margin: 0 0 10px; font-size: 20px; text-align: center; font-weight: normal;}#main-content h2 { display: none;}#main-content p { margin: 0 0 10px; font-size: 15px; line-height: 17px; text-align: center;}/*.ya-share2 { margin: 0 auto 48px; text-align: center;}*/#shareBlock.white table td { color: #fff;}.social-buttons { margin: 0 auto 48px; text-align: center; overflow: hidden;}.social-buttons ul { display: inline-block;}.social-buttons ul li { float: left; margin: 0 3px;}.social-buttons ul li img { border-radius: 4px;}.social-buttons ul li.fb img { background: #3b5998;}.social-buttons ul li.gp img { background: #dc4e41;}.social-buttons ul li.tw img { background: #00aced;}.high-scores { color: #767676; margin-bottom: 18px; display: inline-block; vertical-align: top; max-width: 290px;}.high-scores:first-child { margin-right: 50px;}@media (max-width: 520px) { .high-scores { margin: 0 auto 48px; } .high-scores:first-child { margin-right: auto; }}.high-scores .headline { margin: 0 0 14px; font-size: 13px; font-weight: bold; text-align: center;}.high-scores ul { width: 230px; margin: 0 auto; padding: 0;}.high-scores ul li { margin: 0 0 3px; font-size: 13px; overflow: hidden;}.high-scores ul li span.user { float: left; max-width: 180px;}.high-scores ul li span.result { float: right;}.offline .interstitial-wrapper { margin-bottom: 40px; padding-top: 18px;}.offline .runner-container,.offline .runner-canvas { position: relative;}.other-versions { margin-bottom: 30px; text-align: center;}.other-versions ul { display: inline-block; margin: 0;}.other-versions ul li { float: left; margin: 0 5px; text-align: center;}.other-versions ul li img { display: block;}.other-versions ul li a { font-size: 12px; font-weight: bold; text-decoration: none;}footer .copyright { color: #444; margin: 0 10px; font-size: 12px;}/**** Custom Ending ***/@media (max-width: 420px) { .suggested-left > #control-buttons, .suggested-right > #control-buttons { float: none; } .snackbar { left: 0; bottom: 0; width: 100%; border-radius: 0; }}@media (max-height: 350px) { h1 { margin: 0 0 15px; } .icon-offline { margin: 0 0 10px; } .interstitial-wrapper { margin-top: 5%; } .nav-wrapper { margin-top: 30px; }}@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) { .offline .interstitial-wrapper { margin-left: 0; margin-right: 0; }}@media (min-width: 420px) and (max-width: 736px) and (min-height: 240px) and (max-height: 420px) and (orientation:landscape) { .interstitial-wrapper { margin-bottom: 40px; }}@media (min-height: 240px) and (orientation: landscape) { .offline .interstitial-wrapper { margin-bottom: 20px; } .icon-offline { margin-bottom: 20px; }}@media (max-height: 320px) and (orientation: landscape) { .icon-offline { margin-bottom: 0; } .offline .runner-container { top: 10px; }}@media (max-width: 240px) { button { padding-left: 12px; padding-right: 12px; } .interstitial-wrapper { overflow: inherit; padding: 0 8px; }}@media (max-width: 120px) { button { width: auto; }}.vote-block { overflow: hidden; margin: 0 auto; padding-bottom: 10px; float: none; vertical-align: middle; position: relative; display: block; width: 280px;}.vote-block:after { content: ''; clear: both; display: block;}.vote-block .rating-info { position: absolute; bottom: -5px; left: 2px; font-size: 12px; color: #fff;}.vote-block span.rating-text { font-size: 13px; color: #fff; display: inline-block; float: none; top: 2px; position: relative;}.vote-block .rating { list-style: none; margin: 0 10px 0 0; padding: 0; width: 80px; height: 15px; float: none; vertical-align: middle; display: inline-block;}.vote-block .rating:hover li { background-image: url("/img/star.png");}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .vote-block .rating:hover li { background-image: url("/img/star@2x.png"); background-size: 16px 45px !important; }}.vote-block .rating li { display: block; width: 16px; height: 15px; float: right; /* обтекание по правой стороне как раз необходимо для выстравания элементов в обратном порядке */ text-indent: -9999px; /* скрываем текст */ cursor: pointer;}.vote-block .rating li:hover,.vote-block .rating li:hover ~ li { background-position: 0 -15px;}.vote-block.disabled .rating li.current { display: block; z-index: 10;}.vote-block .rating li.active,.vote-block .rating li.active ~ li { background-position: 0 -30px;}.vote-block li.current { display: none;}.vote-block ol.show-current { position: relative;}.vote-block ol.show-current li { cursor: default; z-index: 2; position: relative;}.vote-block ol.show-current li.current { position: absolute; top: 0; left: 0; display: block; width: 100%; z-index: 1; background-position: 0 0; background-repeat: repeat-x; background-image: url("/img/star.png");}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .vote-block ol.show-current li.current { background-image: url("/img/star@2x.png"); background-size: 16px 45px !important; }}.vote-block ol.show-current li.current span { display: block; height: 20px; width: 0; background: inherit; background-position: 0 -30px;}.div_hover { background-color: #f6dd65; }.vote-form button { padding: 8px 12px; font-size: 14px; margin: 0 3px 5px;}.iframe { border: 2px solid #2e3542; padding: 10px 15px; font-size: 13px; background: #f7f7f7; color: #2e3542;}.black .iframe { border: 2px solid #fff; background: #c8c2c2;}    .apexcharts-canvas { position: relative; user-select: none; /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */}/* scrollbar is not visible by default for legend, hence forcing the visibility */.apexcharts-canvas ::-webkit-scrollbar { -webkit-appearance: none; width: 6px;}.apexcharts-canvas ::-webkit-scrollbar-thumb { border-radius: 4px; background-color: rgba(0,0,0,.5); box-shadow: 0 0 1px rgba(255,255,255,.5); -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);}.apexcharts-canvas.dark { background: #343F57;}.apexcharts-inner { position: relative;}.legend-mouseover-inactive { transition: 0.15s ease all; opacity: 0.20;}.apexcharts-series-collapsed { opacity: 0;}.apexcharts-gridline, .apexcharts-text { pointer-events: none;}.apexcharts-tooltip { border-radius: 5px; box-shadow: 2px 2px 6px -4px #999; cursor: default; font-size: 14px; left: 62px; opacity: 0; pointer-events: none; position: absolute; top: 20px; overflow: hidden; white-space: nowrap; z-index: 12; transition: 0.15s ease all;}.apexcharts-tooltip.light { border: 1px solid #e3e3e3; background: rgba(255, 255, 255, 0.96);}.apexcharts-tooltip.dark { color: #fff; background: rgba(30,30,30, 0.8);}.apexcharts-tooltip * { font-family: inherit;}.apexcharts-tooltip .apexcharts-marker,.apexcharts-area-series .apexcharts-area,.apexcharts-line { pointer-events: none;}.apexcharts-tooltip.active { opacity: 1; transition: 0.15s ease all;}.apexcharts-tooltip-title { padding: 6px; font-size: 15px; margin-bottom: 4px;}.apexcharts-tooltip.light .apexcharts-tooltip-title { background: #ECEFF1; border-bottom: 1px solid #ddd;}.apexcharts-tooltip.dark .apexcharts-tooltip-title { background: rgba(0, 0, 0, 0.7); border-bottom: 1px solid #333;}.apexcharts-tooltip-text-value,.apexcharts-tooltip-text-z-value { display: inline-block; font-weight: 600; margin-left: 5px;}.apexcharts-tooltip-text-z-label:empty,.apexcharts-tooltip-text-z-value:empty { display: none;}.apexcharts-tooltip-text-value, .apexcharts-tooltip-text-z-value { font-weight: 600;}.apexcharts-tooltip-marker { width: 12px; height: 12px; position: relative; top: 0px; margin-right: 10px; border-radius: 50%;}.apexcharts-tooltip-series-group { padding: 0 10px; display: none; text-align: left; justify-content: left; align-items: center;}.apexcharts-tooltip-series-group.active .apexcharts-tooltip-marker { opacity: 1;}.apexcharts-tooltip-series-group.active, .apexcharts-tooltip-series-group:last-child { padding-bottom: 4px;}.apexcharts-tooltip-series-group-hidden { opacity: 0; height: 0; line-height: 0; padding: 0 !important;}.apexcharts-tooltip-y-group { padding: 6px 0 5px;}.apexcharts-tooltip-candlestick { padding: 4px 8px;}.apexcharts-tooltip-candlestick > div { margin: 4px 0;}.apexcharts-tooltip-candlestick span.value { font-weight: bold;}.apexcharts-tooltip-rangebar { padding: 5px 8px;}.apexcharts-tooltip-rangebar .category { font-weight: 600; color: #777;}.apexcharts-tooltip-rangebar .series-name { font-weight: bold; display: block; margin-bottom: 5px;}.apexcharts-xaxistooltip { opacity: 0; padding: 9px 10px; pointer-events: none; color: #373d3f; font-size: 13px; text-align: center; border-radius: 2px; position: absolute; z-index: 10; background: #ECEFF1; border: 1px solid #90A4AE; transition: 0.15s ease all;}.apexcharts-xaxistooltip.dark { background: rgba(0, 0, 0, 0.7); border: 1px solid rgba(0, 0, 0, 0.5); color: #fff;}.apexcharts-xaxistooltip:after, .apexcharts-xaxistooltip:before { left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none;}.apexcharts-xaxistooltip:after { border-color: rgba(236, 239, 241, 0); border-width: 6px; margin-left: -6px;}.apexcharts-xaxistooltip:before { border-color: rgba(144, 164, 174, 0); border-width: 7px; margin-left: -7px;}.apexcharts-xaxistooltip-bottom:after, .apexcharts-xaxistooltip-bottom:before { bottom: 100%;}.apexcharts-xaxistooltip-top:after, .apexcharts-xaxistooltip-top:before { top: 100%;}.apexcharts-xaxistooltip-bottom:after { border-bottom-color: #ECEFF1;}.apexcharts-xaxistooltip-bottom:before { border-bottom-color: #90A4AE;}.apexcharts-xaxistooltip-bottom.dark:after { border-bottom-color: rgba(0, 0, 0, 0.5);}.apexcharts-xaxistooltip-bottom.dark:before { border-bottom-color: rgba(0, 0, 0, 0.5);}.apexcharts-xaxistooltip-top:after { border-top-color:#ECEFF1}.apexcharts-xaxistooltip-top:before { border-top-color: #90A4AE;}.apexcharts-xaxistooltip-top.dark:after { border-top-color:rgba(0, 0, 0, 0.5);}.apexcharts-xaxistooltip-top.dark:before { border-top-color: rgba(0, 0, 0, 0.5);}.apexcharts-xaxistooltip.active { opacity: 1; transition: 0.15s ease all;}.apexcharts-yaxistooltip { opacity: 0; padding: 4px 10px; pointer-events: none; color: #373d3f; font-size: 13px; text-align: center; border-radius: 2px; position: absolute; z-index: 10; background: #ECEFF1; border: 1px solid #90A4AE;}.apexcharts-yaxistooltip.dark { background: rgba(0, 0, 0, 0.7); border: 1px solid rgba(0, 0, 0, 0.5); color: #fff;}.apexcharts-yaxistooltip:after, .apexcharts-yaxistooltip:before { top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none;}.apexcharts-yaxistooltip:after { border-color: rgba(236, 239, 241, 0); border-width: 6px; margin-top: -6px;}.apexcharts-yaxistooltip:before { border-color: rgba(144, 164, 174, 0); border-width: 7px; margin-top: -7px;}.apexcharts-yaxistooltip-left:after, .apexcharts-yaxistooltip-left:before { left: 100%;}.apexcharts-yaxistooltip-right:after, .apexcharts-yaxistooltip-right:before { right: 100%;}.apexcharts-yaxistooltip-left:after { border-left-color: #ECEFF1;}.apexcharts-yaxistooltip-left:before { border-left-color: #90A4AE;}.apexcharts-yaxistooltip-left.dark:after { border-left-color: rgba(0, 0, 0, 0.5);}.apexcharts-yaxistooltip-left.dark:before { border-left-color: rgba(0, 0, 0, 0.5);}.apexcharts-yaxistooltip-right:after { border-right-color: #ECEFF1;}.apexcharts-yaxistooltip-right:before { border-right-color: #90A4AE;}.apexcharts-yaxistooltip-right.dark:after { border-right-color: rgba(0, 0, 0, 0.5);}.apexcharts-yaxistooltip-right.dark:before { border-right-color: rgba(0, 0, 0, 0.5);}.apexcharts-yaxistooltip.active { opacity: 1;}.apexcharts-yaxistooltip-hidden { display: none;}.apexcharts-xcrosshairs, .apexcharts-ycrosshairs { pointer-events: none; opacity: 0; transition: 0.15s ease all;}.apexcharts-xcrosshairs.active, .apexcharts-ycrosshairs.active { opacity: 1; transition: 0.15s ease all;}.apexcharts-ycrosshairs-hidden { opacity: 0;}.apexcharts-zoom-rect { pointer-events: none;}.apexcharts-selection-rect { cursor: move;}.svg_select_points, .svg_select_points_rot { opacity: 0; visibility: hidden;}.svg_select_points_l, .svg_select_points_r { cursor: ew-resize; opacity: 1; visibility: visible; fill: #888;}.apexcharts-canvas.zoomable .hovering-zoom { cursor: crosshair}.apexcharts-canvas.zoomable .hovering-pan { cursor: move}.apexcharts-xaxis,.apexcharts-yaxis { pointer-events: none;}.apexcharts-zoom-icon, .apexcharts-zoom-in-icon,.apexcharts-zoom-out-icon,.apexcharts-reset-zoom-icon, .apexcharts-pan-icon, .apexcharts-selection-icon,.apexcharts-menu-icon, .apexcharts-toolbar-custom-icon { cursor: pointer; width: 20px; height: 20px; line-height: 24px; color: #6E8192; text-align: center;}.apexcharts-zoom-icon svg, .apexcharts-zoom-in-icon svg,.apexcharts-zoom-out-icon svg,.apexcharts-reset-zoom-icon svg,.apexcharts-menu-icon svg { fill: #6E8192;}.apexcharts-selection-icon svg { fill: #444; transform: scale(0.76)}.dark .apexcharts-zoom-icon svg, .dark .apexcharts-zoom-in-icon svg,.dark .apexcharts-zoom-out-icon svg,.dark .apexcharts-reset-zoom-icon svg, .dark .apexcharts-pan-icon svg, .dark .apexcharts-selection-icon svg,.dark .apexcharts-menu-icon svg, .dark .apexcharts-toolbar-custom-icon svg{ fill: #f3f4f5;}.apexcharts-canvas .apexcharts-zoom-icon.selected svg, .apexcharts-canvas .apexcharts-selection-icon.selected svg, .apexcharts-canvas .apexcharts-reset-zoom-icon.selected svg { fill: #008FFB;}.light .apexcharts-selection-icon:not(.selected):hover svg,.light .apexcharts-zoom-icon:not(.selected):hover svg, .light .apexcharts-zoom-in-icon:hover svg, .light .apexcharts-zoom-out-icon:hover svg, .light .apexcharts-reset-zoom-icon:hover svg, .light .apexcharts-menu-icon:hover svg { fill: #333;}.apexcharts-selection-icon, .apexcharts-menu-icon { position: relative;}.apexcharts-reset-zoom-icon { margin-left: 5px;}.apexcharts-zoom-icon, .apexcharts-reset-zoom-icon, .apexcharts-menu-icon { transform: scale(0.85);}.apexcharts-zoom-in-icon, .apexcharts-zoom-out-icon { transform: scale(0.7)}.apexcharts-zoom-out-icon { margin-right: 3px;}.apexcharts-pan-icon { transform: scale(0.62); position: relative; left: 1px; top: 0px;}.apexcharts-pan-icon svg { fill: #fff; stroke: #6E8192; stroke-width: 2;}.apexcharts-pan-icon.selected svg { stroke: #008FFB;}.apexcharts-pan-icon:not(.selected):hover svg { stroke: #333;}.apexcharts-toolbar { position: absolute; z-index: 11; top: 0px; right: 3px; max-width: 176px; text-align: right; border-radius: 3px; padding: 0px 6px 2px 6px; display: flex; justify-content: space-between; align-items: center; }.apexcharts-toolbar svg { pointer-events: none;}.apexcharts-menu { background: #fff; position: absolute; top: 100%; border: 1px solid #ddd; border-radius: 3px; padding: 3px; right: 10px; opacity: 0; min-width: 110px; transition: 0.15s ease all; pointer-events: none;}.apexcharts-menu.open { opacity: 1; pointer-events: all; transition: 0.15s ease all;}.apexcharts-menu-item { padding: 6px 7px; font-size: 12px; cursor: pointer;}.light .apexcharts-menu-item:hover { background: #eee;}.dark .apexcharts-menu { background: rgba(0, 0, 0, 0.7); color: #fff;}@media screen and (min-width: 768px) { .apexcharts-toolbar { /*opacity: 0;*/ } .apexcharts-canvas:hover .apexcharts-toolbar { opacity: 1; } }.apexcharts-datalabel.hidden { opacity: 0;}.apexcharts-pie-label,.apexcharts-datalabel, .apexcharts-datalabel-label, .apexcharts-datalabel-value { cursor: default; pointer-events: none;}.apexcharts-pie-label-delay { opacity: 0; animation-name: opaque; animation-duration: 0.3s; animation-fill-mode: forwards; animation-timing-function: ease;}.apexcharts-canvas .hidden { opacity: 0;}.apexcharts-hide .apexcharts-series-points { opacity: 0;}.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events, .apexcharts-radar-series path, .apexcharts-radar-series polygon { pointer-events: none;}/* markers */.apexcharts-marker { transition: 0.15s ease all;}@keyframes opaque { 0% { opacity: 0; } 100% { opacity: 1; }}.black-page .apexcharts-xaxis-label,.black-page .apexcharts-yaxis-label { fill: #fff !important;}	</style>
+    <link href="./game5_files/css" rel="stylesheet" type="text/css"><script async="" src="./game5_files/analytics.js.download"></script><script src="./game5_files/sdk.js.download" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./game5_files/sdk.js(1).download"></script><script src="./game5_files/jquery.min.js.download"></script>
+	<script>
+		var user_name = '';
+			</script>
+
+
+    <script>document.write('<script src="' + '//gdpr.chromedino.com/channel/120?enc='+encodeURIComponent(document.inputEncoding) + '"></scr' + 'ipt>');</script><script src="./game5_files/120"></script><link rel="stylesheet" type="text/css" href="./game5_files/cookieconsent.min.css">
+<script src="./game5_files/cookieconsent.min.js.download"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#edeff5",
+      "text": "#838391"
+    },
+    "button": {
+      "background": "#4b81e8"
+    }
+  },
+  "type": "opt-out",
+  "content": {
+    "href": "https://chromedino.com/privacy.php"
+  }
+})});
+</script><script>
+window.onkeydown = function(e) {
+  if (e.keyCode == 32 && e.target == document.body) {
+    e.preventDefault();
+  }
+};
+    </script>
+<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_new_ui_mobile_overlay_active{overflow:hidden}@keyframes fb_mpn_landing_page_slide_in{0%{border-radius:50%;margin:0 24px;width:60px}40%{border-radius:18px}100%{margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_in_from_left{0%{border-radius:50%;left:12px;margin:0 24px;width:60px}40%{border-radius:18px}100%{left:12px;margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style><link rel="stylesheet" href="./game5_files/css(1)" media="all"><link rel="stylesheet" href="./game5_files/css(1)" media="all"><style data-styled="" data-styled-version="4.3.2"></style><style></style></head>
+
+<body id="t" class="offline main-page"><div class="cc-revoke cc-bottom cc-animate cc-color-override--1762072787" style="display: none;">Cookie Policy</div><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-opt-out cc-theme-block cc-bottom cc-color-override--1762072787 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies to ensure you get the best experience on our website. <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://chromedino.com/privacy.php" rel="noopener noreferrer nofollow" target="_blank">Learn more</a></span><div class="cc-compliance cc-highlight"><a aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a><a aria-label="allow cookies" role="button" tabindex="0" class="cc-btn cc-allow">Allow cookies</a></div><!--googleon: all--></div>
+
+	<header id="main-frame-error" class="interstitial-wrapper __wrapper">
+		<div id="main-content">
+			<h1>T-Rex Chrome Dino Game</h1>
+			<h2>Google Dinosaur Record</h2>
+			<p>T-Rex Dinosaur - a replica of the hidden game from Chrome offline mode. Press Space to start the game online and jump your Dino, use down arrow (↓) to duck.</p>
+		</div>
+	<div class="runner-container" style="width: 600px; height: 150px;"><canvas class="runner-canvas" width="600" height="150" style="width: 600px; height: 150px;"></canvas></div></header>
+<div id="shareBlock" style="display:none">
+    <table style="margin:0 auto 10px"><tbody><tr>
+            <td colspan="3"><strong><span style="font-size:20px;"><span style="color:#6cf">S</span>hare Your <span style="color:#e6ca00">S</span>core</span></strong></td>
+        </tr><tr>
+            <td style="text-align:right"><a href="https://chromedino.com/#" onclick="shareScore(&#39;fb&#39;)"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAllBMVEUAAAAxMTEyMjIxMTEwMDAxMTExMTEwMDAwMDAxMTEyMjIxMTExMTEwMDAyMjIxMTEyMjIyMjIxMTEyMjIyMjIxMTEzMzMxMTH////29vb9/f12dnZTU1NFRUU6Ojrb29sjIyPz8/M+Pj41NTUoKCjt7e3l5eVjY2NHR0cUFBTf39/Pz8/BwcGzs7OoqKhra2srKysbGxtexureAAAAFnRSTlMA+vCqk4guIgQD381QFF1doN7OUxSfA9r/KwAAATlJREFUKM91k9d6gzAMhc1MzEzSFBm37Mzuvv/LVQxLQL+cC5D0YyTbkjCSRz91AssKnMSPpVhp4x2AFHqbJX2yMZpNQtOOZnDrEiK5W6K7icL8uTPcBROHUWMGd8oLGdH2FWXWR0PNNpd0fddKncvpexvrlx4QLj8U4ovB4ElxPIxOn7I4a119fnWmljAWPtqGF7nKX04njvgiAcpcl4i/6xoolAqH7PKt0UrnTdVRyBEBgMEXpbEyVZm/AwTCIrvN1cCrmnJbiMm5/zQ6v95/0SYcAG/s1lcOGS/Yc2noFiPmgMMbQ/3DKR3LAvOxxOEDDMOhSu/xak8uLvSmlBowXSgqIr/DXmgJQ7RoJm4lbiZuRa5ofD9vuZGztcBFSorGMQAUjcFyiEIk6yFiydhP+hHcO+lsBP8AhhY/reDaq5AAAAAASUVORK5CYII="></a></td>
+            <td><a href="https://chromedino.com/#" onclick="shareScore(&#39;tw&#39;)"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAtFBMVEUAAAAxMTEzMzMyMjIzMzMzMzMyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIvLy8yMjIyMjIzMzMyMjIzMzP///8xMTEvLy8oKCgsLCxEREQ6Ojo2Njbh4eGcnJz8/Pz39/fExMSpqalQUFDn5+fS0tK4uLigoKCAgIBeXl5JSUnu7u7W1tbNzc2/v7+ysrKvr6+JiYlycnJiYmJXV1dUVFQ+Pj75+fmQkJCPj494eHh1dXVpaWlPb4DRAAAAE3RSTlMAB5H76ejddkUXEsZUhAHFhYNTYotokQAAAW1JREFUKM99k9d6gzAMhTFhJRDaxpbNTIDsNHt0vv97FQ9iUvr1XBn/HFm2JOMu5Jm+1etZvukh47f6ro0BCwG23X7YhihwONRyAqTp4Bl3NBzcqdm2NieYiiPp7fpl/ODBC5SC8gchz9nhHxQUZbcYoiiCeun0a+wKGidU0PRjV5Tn1Tnlv7v1yTbwiO+LhDto/kYIyYpjTOtdGxmeNB3Ifs0oxBPCNc4TcZhnmMBxlJNxll/ZhQhtKxDbpuHLdC8zQiabbCbxXmXqG5bASa6iSrxgEltGT2B25KDRZsmwUK/G0n5o4dcrbbAlF9Fqq3GpYoNl+A2eaXOlzPAkL4YBWDWfSDr9ZFhhs3mWeF19ZYJmKi/5LMjm+HYqp9K6+9bURrIkAOtlOS+K+eKURrq4ri4oY0kcpywChZqChqodgDeChEoj2UxD3FVteUHdVtQydasO//AO/huD0cMghfUQqbxADFEDOiP41B7BH9OkO8fsAV6TAAAAAElFTkSuQmCC"></a></td>
+        </tr></tbody>
+    </table>
+
+    <div id="currentScore" style="display:none">81</div>
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script>
+        function LoadAllJs() {
+            fileref=document.createElement('script');
+            fileref.setAttribute("type","text/javascript");
+            fileref.setAttribute("src", 'https://platform.twitter.com/widgets.js');
+            document.body.appendChild(fileref);
+        }
+        // Check for browser support of event handling capability
+        if (window.addEventListener)
+            window.addEventListener("load", LoadAllJs, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", LoadAllJs);
+        else window.onload = LoadAllJs;
+        window.fbAsyncInit = function() {
+            FB.init({appId: '793583864096070', status: true, cookie: true, xfbml: true});
+            if(typeof addFbInits == 'function') {addFbInits();}
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=793583864096070&autoLogAppEvents=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        
+
+        function shareScore(platform) {
+            var c=document.getElementsByClassName("runner-canvas");
+            var cnvs=document.createElement('canvas');
+            var ctx = cnvs.getContext('2d');
+            var cscr=document.getElementById("currentScore");
+            cnvs.width=600;
+            cnvs.height=320;
+            ctx.drawImage(c[0], 0, 85);
+            $.ajax({
+                type: "POST",
+                url: "/game.php",
+                data: { act:"storeimg", img_data:cnvs.toDataURL()},
+                cache: false,
+                contentType: "application/x-www-form-urlencoded",
+                success: function (result) {
+                    if (platform == 'fb') {
+                        FB.ui({
+                            method: 'share',
+                            href: 'https://chromedino.com/game.php?act=sharepage&score='+cscr.textContent+'&scoreimg='+result,
+                        }, function(response){});
+                    } else if (platform == 'tw') {
+                        var mtitle='I scored '+cscr.textContent+' in T-Rex game online - ';
+                        window.open("https://twitter.com/share?url="+escape('https://chromedino.com/game.php?act=sharepage&score='+cscr.textContent+'&scoreimg='+result)+"&text="+mtitle, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;
+                    }
+                }
+            });
+        }
+    </script>
+</div>
+
+<section id="offline-resources">
+	<img id="offline-resources-1x" src="./game5_files/offline-sprite-1x.png" alt="Dino Chrome Online Game Sprite 1">
+	<img id="offline-resources-2x" src="./game5_files/offline-sprite-2x.png" alt="Dino Chrome Online Game Sprite 2">
+	<template id="audio-resources"></template>
+</section>
+	    <center><script async="" src="./game5_files/f.txt"></script>
+<!-- chrome-kvadr -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4168170783196300" data-ad-slot="8072394506" data-ad-format="auto" data-full-width-responsive="true"><iframe id="aswift_1" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="./game5_files/saved_resource.html"><iframe id="google_ads_frame0" src="./game5_files/saved_resource(1).html"></iframe></iframe></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+
+	<div class="__wrapper" align="center">
+
+
+		<div class="high-scores" align="center">
+			<h2 class="headline">5 highest scores of the day:</h2>
+			<ul>
+				<li><span class="user">KauaZao0o</span> <span class="result" id="score-1">100439</span></li><li><span class="user">cduck</span> <span class="result" id="score-2">31467</span></li><li><span class="user">Anonym</span> <span class="result" id="score-3">3048</span></li><li><span class="user">ToMo</span> <span class="result" id="score-4">2990</span></li><li><span class="user">Cuckhold</span> <span class="result" id="score-5">2590</span></li>			</ul>
+		</div>
+		<div class="high-scores" align="center">
+			<h2 class="headline">Top 5 of all time:</h2>
+			<ul>
+				<li><span class="user">JHBWCD</span> <span class="result" id="score-7">158814</span></li><li><span class="user">R3kT</span> <span class="result" id="score-8">145633</span></li><li><span class="user">Hazard</span> <span class="result" id="score-9">121148</span></li><li><span class="user">Aaronlol</span> <span class="result" id="score-10">103043</span></li><li><span class="user">KauaZao0o</span> <span class="result" id="score-11">100439</span></li>			</ul>
+			
+		</div>
+	
+		</div>
+    <center>	<script async="" src="./game5_files/f.txt"></script>
+<!-- dino2f -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4168170783196300" data-ad-slot="7865874315" data-ad-format="auto" data-full-width-responsive="true"><iframe id="aswift_2" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="./game5_files/saved_resource(2).html"><iframe id="google_ads_frame1" src="./game5_files/saved_resource(3).html"></iframe></iframe></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+<br>	<footer class="other-versions __wrapper">
+		<ul>
+							<li><a href="https://chromedino.com/black/"><img src="./game5_files/black_image.jpg" alt="Chrome Dino Game -- Night Version"> <span>Night</span></a></li>
+				<li><a href="https://chromedino.com/color/"><img src="./game5_files/color_image.png" alt="Color Running Dinosaur" width="40"> <span>Color</span></a></li>
+				<li><a href="https://chromedino.com/mario/"><img src="./game5_files/mario_image.jpg" alt="Running Mario Game Online"> <span>Mario</span></a></li>
+                <li><a href="https://chromedino.com/batman/"><img src="./game5_files/batman-image.jpg" width="39" alt="Batman vs Joker Game Online"> <span>Batman</span></a></li>
+                <li><a href="https://chromedino.com/joker/"><img src="./game5_files/joker.png" width="40" alt="Joker vs city"> <span>Joker</span></a></li>
+						
+						
+		</ul>
+		
+			<div class="___wrapper " align="center">
+<h3>What is your best score in T-Rex game? (without cheats!)</h3>
+<div id="mc-container">
+                <form action="https://chromedino.com/" method="post" class="vote-form">
+                <button onclick="setVote(0)">100-499</button>
+                <button onclick="setVote(1)">500-1999</button>
+                <button onclick="setVote(2)">2000-4999</button>
+                <button onclick="setVote(3)">5000-9999</button>
+                <button onclick="setVote(4)">10000+</button>
+                <input type="hidden" name="__vote" value="0">
+                <script>
+                    function setVote(i) {
+                        $('[name="__vote"]').val(i);
+                        $('.vote-form').submit();
+                    }
+                </script>
+            </form>
+            </div>
+
+                <!-- ?php if ($_SERVER['REQUEST_URI'] !== '/'): ? -->
+<h3>Install the Dino game on your website:</h3>
+                <div id="mc-container">
+                    <div class="iframe">
+                        &lt;iframe src="https://chromedino.com/" frameborder="0" scrolling="no" width="100%" height="100%" loading="lazy"&gt;&lt;/iframe&gt;<br>
+                        &lt;style type="text/css"&gt;iframe { position: absolute; width: 100%; height: 100%; z-index: 999; }&lt;/style&gt;
+                    </div>
+                </div>
+                <!-- ?php endif; ? -->
+</div>
+
+		<br>
+		<div class="copyright">© 2016-2021 - Google Chrome Dinosaur Game Online
+	</div></footer>
+	
+	<script type="text/javascript">
+		(function() {
+			var link_element = document.createElement("link"),
+				s = document.getElementsByTagName("script")[0];
+			if (window.location.protocol !== "http:" && window.location.protocol !== "https:") {
+				link_element.href = "http:";
+			}
+			link_element.href += "//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800";
+			link_element.rel = "stylesheet";
+			link_element.type = "text/css";
+			s.parentNode.insertBefore(link_element, s);
+		})();
+	</script>
+	
+	<script src="./game5_files/game.js.download"></script>
+		<script src="./game5_files/gdpr.js.download"></script>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-87132083-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	<!--LiveInternet counter--><script type="text/javascript">
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='1' height='1'><\/a>")
+</script><a href="https://www.liveinternet.ru/click" target="_blank"><img src="./game5_files/hit" alt="" title="LiveInternet" border="0" width="1" height="1" hidden="" style="display: none !important;"></a><!--/LiveInternet-->
+    
+  
+
+<script type="text/javascript" src="./game5_files/widgets.js.download"></script><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./game5_files/widget_iframe.06c6ee58c3810956b7509218508c7b56.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./game5_files/saved_resource(4).html"></iframe></body><div class="notranslate" style="position: absolute; top: 0; right:0;" id="vd-root-d19608294"></div></html>
