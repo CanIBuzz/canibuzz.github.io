@@ -1,5 +1,5 @@
 ---
-permalink: /blog/pages1.html
+permalink: /blog/pages2.html
 layout: pages1
 ---
 {% for post in site.posts %}{
