@@ -16,5 +16,5 @@ layout: pages2
             "authors": [{{ blog.author | jsonify }}],
             "categories": {{ blog.categories | jsonify }},
             "tags": {{ blog.tags | jsonify }}
-} 
+}
         {% unless forloop.last %},{% endunless %}{% endfor %}
