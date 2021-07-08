@@ -19,5 +19,3 @@ layout: json
             "tags": {{ blog.tags | jsonify }}
 }
         {% unless forloop.last %},{% endunless %}{% endfor %}
-    ]
-}
