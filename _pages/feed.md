@@ -1,5 +1,6 @@
 ---
 permalink: /blog/feed.json
+layout: json
 ---
 {% assign pages = site.pages | where_exp: "p", "p.layout != nil" %}
 {
