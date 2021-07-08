@@ -3,6 +3,7 @@ permalink: /blog/page2.html
 layout: page2
 ---
 {% for post in site.posts %}{
+        {% raw %}
             'id': '{{ blog.url | absolute_url }}',
             'url': '{{ blog.url | absolute_url }}',
             'language': 'en',
@@ -16,5 +17,6 @@ layout: page2
             'authors': '['{{ blog.author | jsonify }}',
             'categories': '{{ post.categories | jsonify }}',
             'tags': '{{ blog.tags | jsonify }}'
+        {% endraw %}
 }
         {% unless forloop.last %},{% endunless %}{% endfor %}
