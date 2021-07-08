@@ -1,7 +1,6 @@
 ---
 permalink: /blog/feed.json
 ---
-{% raw %}
 {
     "version": "https://jsonfeed.org/version/1.1",
     "title": "{{ 'JSON Feed for ' | append: site.author | xml_escape }}",
@@ -30,4 +29,3 @@ permalink: /blog/feed.json
         {% unless forloop.last %},{% endunless %}{% endfor %}
     ]
 }
-{% endraw %}
