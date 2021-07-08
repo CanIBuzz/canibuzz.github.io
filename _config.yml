@@ -27,6 +27,7 @@ theme: minima
 gems:
   - jekyll-paginate-v2
   - octopress-paginate
+  - jekyll-json-feed
 exclude:
   - Gemfile
   - Gemfile.lock
