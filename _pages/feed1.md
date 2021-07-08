@@ -1,6 +1,6 @@
 ---
-permalink: /blog/pages2.html
-layout: pages1
+permalink: /blog/pages1.html
+layout: pages2
 ---
 {% for post in site.posts %}{
             "id": "{{ blog.url | absolute_url }}",
