@@ -47,7 +47,16 @@
 
     </body>
     <script>
-var tableData = [{{ content | jsonify | remove: '<p>' | remove: '</p>' }}]
+var tableDate = [
+    {
+    {% for post in site.posts %}
+    'title': '{{ post.title }}',
+    'image': '{{ post.image }}',
+    'categories': '{{ post.categories }}'    
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+]
+
+//var tableData = [{{ content | jsonify | remove: '<p>' | remove: '</p>' }}]
 
 
 /*
