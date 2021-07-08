@@ -2,8 +2,7 @@
 permalink: /blog/feed.json
 layout: json
 ---
-{% for post in site.posts %}{
-"id": "{{ blog.url | absolute_url }}",
+{% for post in site.posts %}{ "id": "{{ blog.url | absolute_url }}",
 "url": "{{ blog.url | absolute_url }}",
 "language": "en",
 "title": {{ post.title | jsonify }},
@@ -15,6 +14,5 @@ layout: json
 "banner_image": "{{ blog.image.path | absolute_url }}",
 "authors": [{{ blog.author | jsonify }}],
 "categories": {{ blog.categories | jsonify }},
-"tags": {{ blog.tags | jsonify }}
-}
+"tags": {{ blog.tags | jsonify }}}
 {% unless forloop.last %},{% endunless %}{% endfor %}
