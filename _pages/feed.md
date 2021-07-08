@@ -1,5 +1,6 @@
 ---
 permalink: /blog/feed.json
+layout: json
 ---
 {
     "version": "https://jsonfeed.org/version/1.1",
