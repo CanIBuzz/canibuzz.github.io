@@ -25,7 +25,7 @@ github_username:  sverrirs
 markdown: kramdown
 theme: minima
 gems:
-  - jekyll-paginate-v2
+# - jekyll-paginate-v2
   - octopress-paginate
   - jekyll-json-feed
 exclude:
