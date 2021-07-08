@@ -2,8 +2,7 @@
 permalink: /blog/feed.json
 layout: json
 ---
-{% for post in site.posts %}
-{
+{% for post in site.posts %}{
             "id": "{{ blog.url | absolute_url }}",
             "url": "{{ blog.url | absolute_url }}",
             "language": "en",
