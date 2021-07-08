@@ -1,6 +1,7 @@
 ---
 permalink: /blog/feed.json
 ---
+{% assign pages = site.pages | where_exp: "p", "p.layout != nil" %}
 {
     "version": "https://jsonfeed.org/version/1.1",
     "title": "{{ 'JSON Feed for ' | append: site.author | xml_escape }}",
