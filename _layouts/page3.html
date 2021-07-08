@@ -45,11 +45,11 @@
     </div>
     <script>
  var tableData = [
-    { {% for post in site.posts %}
-    'title': '{{ post.title }}',
-    'image': '{{ post.image }}',
-    'categories': '{{ post.image }}'
-    },{% unless forloop.last %}{% endunless %}{% endfor %}
+{{% raw %}}{{{% endraw %}}{% for post in site.posts %}
+'title': '{{ post.title }}',
+'image': '{{ post.image }}',
+'categories': '{{ post.image }}'
+},{% unless forloop.last %}{% endunless %}{% endfor %}
 ]
 
 /*
