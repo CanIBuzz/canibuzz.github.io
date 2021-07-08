@@ -33,6 +33,7 @@ exclude:
   - Gemfile.lock
 plugins:
   - jekyll-paginate
+  - jekyll-paginate-v2
 #  - jekyll-json-feed
 # Produces a cleaner folder structure when using categories
 permalink: /:year/:month/:title.html
