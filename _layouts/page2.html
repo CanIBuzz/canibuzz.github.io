@@ -48,7 +48,7 @@
     </body>
     <script>
         var tableData = [
-    {{ content | remove: '<p>' | remove: '</p>' }}
+    {{ content | markdownify | remove: '<p>' | remove: '</p>' }}
 ]
 
 
