@@ -1,5 +1,6 @@
 ---
 permalink: /blog/feed.json
+layout: none
 ---
 {% raw %}
 {
