@@ -8,5 +8,5 @@
 "home_page_url": "{{ "/" | absolute_url }}",
 "feed_url": "{{ "/blog/feed.json" | absolute_url }}",
 "user_comment": "This feed allows you to read the blogs from this site in any feed reader that supports the JSON Feed format.",
-"items": [{{ content }}]
+"items": [{{ content | markdownify | remove: '<p>' | remove: '</p>' }}]
 }
