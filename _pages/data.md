@@ -1,5 +1,6 @@
 ---
 permalink: /data.json
+layout: none
 ---
 [
   {
