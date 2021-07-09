@@ -3,7 +3,6 @@ title: Search
 layout: none
 permalink: /search.html
 ---
-
 <!DOCTYPE html>
 <html>
  <head>
