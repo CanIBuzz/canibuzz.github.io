@@ -47,8 +47,8 @@
      {% for post in site.posts %}
     { 
     'title': '{{ post.title }}',
-    'image': '{{ post.image }}',
-    'categories': '{{ post.image }}'
+    'image': '{{ post.titleimg }}',
+    'categories': '{{ post.categories }}'
     }{% unless forloop.last %},{% endunless %}{% endfor %}]
 
 /*
