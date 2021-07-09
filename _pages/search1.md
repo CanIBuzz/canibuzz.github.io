@@ -39,9 +39,7 @@ permalink: /search.html
    <br />
   </div>
  </body>
-</html>
-
-<script>
+ <script>
 $(document).ready(function(){
  $.ajaxSetup({ cache: false });
  $('#search').keyup(function(){
@@ -66,3 +64,4 @@ $(document).ready(function(){
  });
 });
 </script>
+</html>
