@@ -1,5 +1,8 @@
 <html>
 <head>
+
+    {% include pagehead.html %}
+
  <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
@@ -21,9 +24,12 @@
 </style>
 </head>
 <body>
-    <div class="container ">
 
-    </div>
+    {% include header.html %}
+
+    {% include breadcrumbs.html %}
+
+    <section class="blog_area section-padding">
     <div class="container ">
         <!-- Table structure here -->
         <table class="table table-dark" id="our-table">
@@ -42,6 +48,12 @@
     <div class="container ">
         <div id="pagination-wrapper"></div>
     </div>
+
+</section>
+    {% include footer.html %}
+
+{% include scriptsfooter.html %}
+
     <script>
  var tableData = [
      {% for post in site.posts %}
