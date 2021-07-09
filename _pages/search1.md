@@ -50,7 +50,7 @@ $(document).ready(function(){
    $.each(data, function(key, value){
     if (value.title.search(expression) != -1 || value.content.search(expression) != -1)
     {
-     $('#result').append('<a href="'+value.url+'"></a><li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.title+' | <span class="text-muted">'+value.location+'</span></li></a>');
+     $('#result').append('<li class="list-group-item link-class">< href="'+value.url+'"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.title+' | <span class="text-muted">'+value.location+'</span></a></li>');
     }
    });   
   });
