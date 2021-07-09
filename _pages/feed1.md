@@ -1,4 +1,5 @@
 ---
+title: Blog
 permalink: /blog/page2.html
 layout: page3
 ---
