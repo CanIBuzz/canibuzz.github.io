@@ -2,7 +2,7 @@
   {% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.category }}",
+      "category" : "{{ post.categories }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
@@ -14,7 +14,7 @@
    {
      {% if page.title != nil %}
         "title"    : "{{ page.title | escape }}",
-        "category" : "{{ page.category }}",
+        "category" : "{{ page.categories }}",
         "tags"     : "{{ page.tags | join: ', ' }}",
         "url"      : "{{ site.baseurl }}{{ page.url }}",
         "date"     : "{{ page.date }}",
