@@ -1,6 +1,6 @@
 ---
 title: Blog
-permalink: /blog/page2.html
+permalink: /blog.html
 layout: page3
 ---
 {% for post in site.posts %}{
