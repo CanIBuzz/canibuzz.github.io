@@ -87,6 +87,8 @@
    
    
    function buildTable() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
        var table = $('#table-body')
    
        var data = pagination(state.querySet, state.page, state.rows)
@@ -117,7 +119,8 @@
            table.append(row)
        }
    
-       pageButtons(data.pages)
+       pageButtons(data.pages);
+       
    }
    
        </script>
