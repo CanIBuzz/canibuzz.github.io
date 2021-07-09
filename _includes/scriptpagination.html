@@ -95,9 +95,24 @@
        for (var i = 1 in myList) {
            //Keep in mind we are using "Template Litterals to create rows"
            var row = `
-                     <li>${myList[i].title}</li>
-                     <li><img src="${myList[i].image}"></li>
-                     <li>${myList[i].categories}</li>
+                    <article class="blog_item">
+                    <div class="blog_item_img">
+                    <img class="card-img rounded-0" src="${myList[i].image}" alt="" data-pagespeed-url-hash="4114322597" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <a href="#" class="blog_item_date">
+                    <h3>${myList[i].date1}</h3>
+                    <p>${myList[i].date2}</p>
+                    </a>
+                    </div>
+                    <div class="blog_details">
+                    <a class="d-inline-block" href="${myList[i].url}">
+                    <h2>${myList[i].title}</h2>
+                    </a>
+                    <p>${myList[i].header}</p>
+                    <ul class="blog-info-link">
+                    <li><a href="#"><i class="fa fa-user"></i>${myList[i].categories}</a></li>
+                    </ul>
+                    </div>
+                    </article>
                      `
            table.append(row)
        }
