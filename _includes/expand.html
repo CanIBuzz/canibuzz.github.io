@@ -1,0 +1,26 @@
+<a href="#" class="page-link" id="expand" title="Open all hints" onclick="openAll()">Expand</a>
+
+<script>
+function openAll() {
+  var elems = document.getElementsByTagName("details");
+
+  for (var i = 0; i <= elems.length-1; i++){
+    elems[i].setAttribute("open", "true");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: closeAll();" );
+  document.getElementById("expand").innerHTML = "Collapse";
+  document.getElementById("expand").setAttribute('title', 'Close all hints');
+}
+
+function closeAll() {
+  var elems = document.getElementsByTagName("details");
+
+  for (var i = 0; i <= elems.length-1; i++){
+    elems[i].removeAttribute("open");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: openAll();" );
+  document.getElementById("expand").innerHTML = "Expand";
+  document.getElementById("expand").setAttribute('title', 'Open all hints');
+}
+</script>
+<!-- source: https://stackoverflow.com/questions/43008609/expanding-all-details-tags -->

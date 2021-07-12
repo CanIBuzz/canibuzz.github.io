@@ -47,7 +47,20 @@ permalink: /:year/:month/:title.html
 collections:
   penguins:
     output: true
-    permalink: /penguins/:path/
+    permalink: /penguins/:path/ 
+  videos:
+    output: true
+    permalink: /v/:title:output_ext
+  articles:
+    output: true
+    permalink: /a/:title:output_ext
+  topics:
+    output: true
+    permalink: /t/:title:output_ext
+  drafts:
+    output: true
+    permalink: /drafts/:title:output_ext
+
 
 # Pagination Settings
 pagination:
@@ -71,3 +84,4 @@ include: ['_pages']
 staticman_url: https://canibuzzstatic.herokuapp.com/v2/entry/CanIBuzz/canibuzz.github.io/master/comments
 #staticman_url: https://canibuzzstatic.herokuapp.com/v1/connect/canibuzz/canibuzz.github.io
 enableComments: true
+

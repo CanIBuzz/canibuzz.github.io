@@ -1,0 +1,11 @@
+_id: a4e371a0-e4ee-11ea-b50e-a1c30b646a90
+_parent: 'https://spinningnumbers.org/a/simplify-resistor-networks.html'
+replying_to: ''
+message: >-
+  12 ohm, 6 ohm, and 4 ohm are parallel.  First consider the equivalent resistance
+  corresponding to 12 and 6. It can be easily calculated as 12*6/12+6 = 4. Then 4 and
+  4 are parallel. It's equivalant is 2. Hence total resistance is 3.
+name: Raman
+email: f4587418e1707e0e5cdbc8b977231031
+hp: ''
+date: '2020-08-23T03:13:41.021Z'
