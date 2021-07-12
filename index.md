@@ -2,7 +2,7 @@
 layout: index
 title:  Spinning Numbers 
 author: Willy McAllister
-comments: true
+comments: false
 ---
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
