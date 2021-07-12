@@ -24,6 +24,10 @@
 
 {% include productivity_area.html %}
 
+{% if page.comments == true %}
+    {% include comments.html %}
+  {% endif %}
+
 {% include footer.html %}
 
 {% include scriptsfooter.html %}
