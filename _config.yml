@@ -33,6 +33,9 @@ exclude:
   - Gemfile.lock
 plugins:
   - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 #  - jekyll-paginate-v2
 #  - jekyll-json-feed
 # Produces a cleaner folder structure when using categories
@@ -67,3 +70,4 @@ pagination:
 include: ['_pages']
 staticman_url: https://canibuzzstatic.herokuapp.com/v2/entry/CanIBuzz/canibuzz.github.io/master/comments
 #staticman_url: https://canibuzzstatic.herokuapp.com/v1/connect/canibuzz/canibuzz.github.io
+enableComments: true
