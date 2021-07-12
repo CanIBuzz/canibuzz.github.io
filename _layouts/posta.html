@@ -94,6 +94,10 @@ people like this</p>
 
 {% include blogauthor.html %}
 
+{% if page.comments == true %}
+{% include comments.html %}
+{% endif %}
+
 <div class="comments-area">
 <h4>05 Comments</h4>
 <div class="comment-list">
