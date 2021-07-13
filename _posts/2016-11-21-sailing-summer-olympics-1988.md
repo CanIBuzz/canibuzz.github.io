@@ -5,7 +5,7 @@ date:   2016-11-21 19:16:49 +0100
 categories: wikipedia
 comments: true
 ---
-
+{% capture post_slug %}{{ page.title | slugify: "latin" | prepend:'b-' }}{% endcapture %}
 _From Wikipedia, the free encyclopedia_
 
 Sailing/Yachting is an Olympic sport starting from the 1896 Olympics in Athens, Greece). With the exception of 1904 and possible 1916 sailing was always a part of the Olympic program. The Sailing program of 1988 consisted of a total of eight sailing classes (disciplines). For each class seven races were scheduled from September 20, 1988 to September 27, 1988 of the coast of Busan and was the first time that a separate event was allocated exclusively for women (sailed in the 470 class). The sailing was done on the triangular type Olympic courses.
