@@ -48,7 +48,7 @@ permalink: /b/:title:output_ext
 collections:
   penguins:
     output: true
-    permalink: /penguins/:path/ 
+    permalink: /penguins/:title:output_ext
   videos:
     output: true
     permalink: /v/:title:output_ext
@@ -85,7 +85,7 @@ pagination:
 #paginate: 3
 #paginate_path: "/page/page:num/"
 include: ['_pages']
-staticman_url: https://canibuzzstatic.herokuapp.com/v2/entry/CanIBuzz/canibuzz.github.io/master/comments
+staticman_url: https://canibuzzstatic.herokuapp.com/v2/entry/CanIBuzz/canibuzz.github.io/main/comments
 #staticman_url: https://canibuzzstatic.herokuapp.com/v1/connect/canibuzz/canibuzz.github.io
 enableComments: true
 
