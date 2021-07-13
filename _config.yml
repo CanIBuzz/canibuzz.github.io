@@ -58,6 +58,9 @@ collections:
   topics:
     output: true
     permalink: /t/:title:output_ext
+  test:
+    output: true
+    permalink: /u/:title:output_ext
   drafts:
     output: true
     permalink: /drafts/:title:output_ext
