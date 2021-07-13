@@ -3,6 +3,7 @@ layout: posts
 title:  Sailing at the 1988 Summer Olympics
 date:   2016-11-21 19:16:49 +0100
 categories: wikipedia
+comments: true
 ---
 
 _From Wikipedia, the free encyclopedia_
