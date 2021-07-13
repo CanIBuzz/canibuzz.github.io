@@ -85,7 +85,7 @@ pagination:
 #paginate: 3
 #paginate_path: "/page/page:num/"
 include: ['_pages']
-staticman_url: https://canibuzzstatic.herokuapp.com/v2/entry/CanIBuzz/canibuzz.github.io/main/comments
+staticman_url: https://canibuzzstatic.herokuapp.com/v2/connect/CanIBuzz/canibuzz.github.io
 #staticman_url: https://canibuzzstatic.herokuapp.com/v1/connect/canibuzz/canibuzz.github.io
 enableComments: true
 
